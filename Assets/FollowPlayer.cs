@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
-
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private Vector3 posOffset;
-    [SerializeField] private Vector3 rotOffset;
+    [SerializeField] private Transform playerTransform = default;
+    [SerializeField] private Vector3 posOffset = default;
+    [SerializeField] private Vector3 rotOffset = default;
 
     void Update()
     {

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollision : MonoBehaviour
 {
-    [SerializeField] private PlayerMovementController movementScript;
+    [SerializeField] private PlayerMovementController movementScript = default;
     private bool _restartInProgress = false;
     private void OnCollisionEnter(Collision other)
     {

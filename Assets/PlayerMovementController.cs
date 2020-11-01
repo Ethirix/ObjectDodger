@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-
 public class PlayerMovementController : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private float forwardForce;
-    [SerializeField] private float directionalForce;
-    [SerializeField] private float jumpForce;
-    [SerializeField] private GameObject floor;
+    [SerializeField] private Rigidbody rb = default;
+    [SerializeField] private float forwardForce = default;
+    [SerializeField] private float directionalForce = default;
+    [SerializeField] private float jumpForce = default;
+    [SerializeField] private GameObject floor = default;
 
     private bool _isOnGround;
     private void FixedUpdate()

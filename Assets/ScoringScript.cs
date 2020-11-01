@@ -1,12 +1,11 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
-
 public class ScoringScript : MonoBehaviour
 {
-    [SerializeField] private Transform playerTransform;
-    [SerializeField] private PlayerMovementController movementScript;
-    [SerializeField] private TextMeshProUGUI textObject;
+    [SerializeField] private Transform playerTransform = default;
+    [SerializeField] private PlayerMovementController movementScript = default;
+    [SerializeField] private TextMeshProUGUI textObject = default;
     
     void Update()
     {
