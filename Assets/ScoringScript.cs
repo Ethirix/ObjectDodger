@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using TMPro;
 using UnityEngine;
 public class ScoringScript : MonoBehaviour
@@ -9,6 +10,6 @@ public class ScoringScript : MonoBehaviour
     
     void Update()
     {
-        if (movementScript.enabled) { textObject.text = Math.Round(playerTransform.position.z, 0).ToString(); }
+        if (movementScript.enabled) { textObject.text = Math.Round(playerTransform.position.z, 0).ToString(CultureInfo.CurrentCulture); }
     }
 }
