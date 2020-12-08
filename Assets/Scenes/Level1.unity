@@ -366,7 +366,7 @@ MonoBehaviour:
   rb: {fileID: 288182802}
   forwardForce: 50
   directionalForce: 0.5
-  jumpForce: 0.5
+  jumpForce: 1
   floor: {fileID: 496587911}
   allowJumpMovement: 1
 --- !u!114 &288182808
