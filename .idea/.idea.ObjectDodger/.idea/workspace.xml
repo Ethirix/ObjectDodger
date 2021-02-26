@@ -20,13 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="686297b2-bdd2-4f40-8456-af323962bdc1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ObjectDodger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerMovementController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerMovementController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/GroundMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/GroundMat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/ObstacleMat2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/ObstacleMat2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/PlayerMat2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/PlayerMat2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/UniversalRenderPipelineAsset_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/UniversalRenderPipelineAsset_Renderer.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,25 +48,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/RespawnScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ScoringScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PositionResetter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerMovementController.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/FollowPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerHitsFinish.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerCollision.cs" />
-        <option value="$PROJECT_DIR$/Assets/ScoringScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/RespawnScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/ClampToPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerMovementController.cs" />
-      </list>
-    </option>
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerCollision.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PositionResetter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/RespawnScript.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1jhrvkjnqCmr4zykrYUTz4u5KYK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -72,7 +70,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -89,7 +87,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -98,7 +96,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -120,6 +118,11 @@
       <workItem from="1606659992179" duration="85000" />
       <workItem from="1606660103343" duration="467000" />
       <workItem from="1607452282681" duration="970000" />
+      <workItem from="1613688784153" duration="96000" />
+      <workItem from="1613688902367" duration="42000" />
+      <workItem from="1613688954585" duration="149000" />
+      <workItem from="1613689148350" duration="481000" />
+      <workItem from="1613689673691" duration="375000" />
     </task>
     <servers />
   </component>
@@ -142,99 +145,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1606076494212">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="216" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606076494212" />
-    <state width="1877" height="367" key="GridCell.Tab.0.bottom" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.0.center" timestamp="1606169585181">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585181" />
-    <state width="1877" height="367" key="GridCell.Tab.0.left" timestamp="1606169585181">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585181" />
-    <state width="1877" height="367" key="GridCell.Tab.0.right" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.1.bottom" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.1.center" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.1.left" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.1.right" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.1.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.2.bottom" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.2.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.2.center" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.2.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.2.left" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.2.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.2.right" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.2.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.3.bottom" timestamp="1606169585183">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.3.bottom/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585183" />
-    <state width="1877" height="367" key="GridCell.Tab.3.center" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.3.center/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.3.left" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.3.left/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state width="1877" height="367" key="GridCell.Tab.3.right" timestamp="1606169585182">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="367" key="GridCell.Tab.3.right/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606169585182" />
-    <state x="724" y="161" key="RiderGenerateDialog" timestamp="1606082214700">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="724" y="161" key="RiderGenerateDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606082214700" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1607452471770">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1607452471770" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1606145663901">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606145663901" />
-    <state x="627" y="237" width="666" height="566" key="find.popup" timestamp="1606096132682">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="627" y="237" width="666" height="566" key="find.popup/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606096132682" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607452785493">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1607452785493" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606148572050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.174.1440.860@0.0.1920.1040" timestamp="1606148572050" />
   </component>
 </project>
