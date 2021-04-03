@@ -36,7 +36,7 @@ public class PlayerMovementController : MonoBehaviour
         //if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && _isOnGround) { rb.AddForce(0f, 0f, forwardForce); }
         //if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && _isOnGround) { rb.AddForce(0f, 0f, -forwardForce); }
 
-        if (Input.GetKey(KeyCode.Space) && _isOnGround && !jumpTimeout) {
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W) && _isOnGround && !jumpTimeout) {
             rb.AddForce(0f, 9.81f * rb.mass * jumpForce, 0f, ForceMode.VelocityChange);
             _jumpEvent.Invoke();
         }
