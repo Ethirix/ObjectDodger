@@ -3,6 +3,8 @@ public class KillMenuBoxes : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.CompareTag("MainMenu_Cube")) {
+            Destroy(other.gameObject);
+        }
     }
 }
