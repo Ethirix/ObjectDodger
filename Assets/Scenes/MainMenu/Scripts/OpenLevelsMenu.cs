@@ -1,13 +1,20 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-namespace Scenes.MainMenu.Scripts
+public class OpenLevelsMenu : MonoBehaviour
 {
-    public class NewBehaviourScript : MonoBehaviour
-    {
-        void Start()
-        {
-        
-        }
+    [SerializeField] private Button levelsButton;
+    [SerializeField] private Canvas mainMenuCanvas;
+    [SerializeField] private Canvas levelsMenuCanvas;
     
+    private void Start()
+    {
+        levelsButton.onClick.AddListener(LoadLevelUI);
+    }
+
+    private void LoadLevelUI()
+    {
+        mainMenuCanvas.gameObject.SetActive(false);
+        levelsMenuCanvas.gameObject.SetActive(true);
     }
 }

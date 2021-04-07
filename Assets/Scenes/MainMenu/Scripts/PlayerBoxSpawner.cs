@@ -33,6 +33,7 @@ namespace Scenes.MainMenu.Scripts
             spawnObject.transform.localScale = new Vector3(boxScale, boxScale, boxScale);
             spawnObject.GetComponent<Rigidbody>().mass = scale.x * scale.y * scale.z;
             spawnObject.tag = "MainMenu_Cube";
+            spawnObject.name = "BackgroundCube";
 
             if (randomSpawnIntensityMinBound < 0.2f) { randomSpawnIntensityMinBound = 0.2f; }
             if (randomSpawnIntensityMinBound > 8.0f) { randomSpawnIntensityMinBound = 8.0f; }
