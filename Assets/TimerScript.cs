@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class TimerScript : MonoBehaviour
@@ -10,7 +7,7 @@ public class TimerScript : MonoBehaviour
     private float time = 0.00f;
     private bool timerEnabled;
 
-    private void Start()
+    private void OnEnable()
     {
         PlayerCollision.WinEvent += EndTimer;
         PlayerCollision.PlayerLostEvent += ResetTimer;
@@ -18,10 +15,17 @@ public class TimerScript : MonoBehaviour
         StartLevelScript.StartEvent += StartTimer;
     }
 
+    private void OnDisable()
+    {
+        PlayerCollision.WinEvent -= EndTimer;
+        PlayerCollision.PlayerLostEvent -= ResetTimer;
+        PlayerCollision.RestartEvent -= ResetTimer;
+        StartLevelScript.StartEvent -= StartTimer;
+    }
+
     private void StartTimer()
     {
         timerEnabled = true;
-        StartCoroutine(TimerCoroutine());
     }
 
     private void ResetTimer()
@@ -36,13 +40,11 @@ public class TimerScript : MonoBehaviour
         timerEnabled = false;
     }
 
-    private IEnumerator TimerCoroutine()
+    private void Update()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.01f);
-        while (timerEnabled) {
-            time += 0.01f;
+        if (timerEnabled) {
+            time += Time.deltaTime;
             timerText.text = "Time: " + time.ToString("#.00") + "s";
-            yield return wait;
         }
     }
 }
