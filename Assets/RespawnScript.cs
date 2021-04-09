@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class RespawnScript : MonoBehaviour
 {
-    [SerializeField] private Button btn = default;
+    [SerializeField] private Button btn;
+    [SerializeField] private TMP_Text restartText;
 
     public delegate void RsEvent();
     public static event RsEvent RespawnEvent;
@@ -24,7 +25,9 @@ public class RespawnScript : MonoBehaviour
     }
     
     private void FireRsEvent() {
-        btn.enabled = false;
-        RespawnEvent?.Invoke();
+        if (!restartText.IsActive()) {
+            btn.enabled = false;
+            RespawnEvent?.Invoke();
+        }
     }
 }

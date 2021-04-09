@@ -4,9 +4,9 @@ public class PlayerCollision : MonoBehaviour
 {
     public delegate void PlayerLost();
     public static event PlayerLost PlayerLostEvent;
-    [SerializeField] private PlayerMovementController movementScript = default;
-    private bool _restartInProgress = false;
-    private bool _playerWon = false;
+    [SerializeField] private PlayerMovementController movementScript;
+    private bool restartInProgress;
+    private bool playerWon;
 
     public delegate void Restart();
     public static event Restart RestartEvent;
@@ -22,8 +22,8 @@ public class PlayerCollision : MonoBehaviour
 
     private void RespawnEventFired() {
         movementScript.enabled = false;
-        if (!_restartInProgress) {
-            _restartInProgress = true;
+        if (!restartInProgress) {
+            restartInProgress = true;
             Invoke(nameof(RestartTimer), 3.0f);
         }
     }
@@ -32,9 +32,9 @@ public class PlayerCollision : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle")) {
             movementScript.enabled = false;
-            if (!_restartInProgress && !_playerWon) {
+            if (!restartInProgress && !playerWon) {
                 PlayerLostEvent?.Invoke();
-                _restartInProgress = true;
+                restartInProgress = true;
                 Invoke(nameof(RestartTimer), 3.0f); 
             }    
         }
@@ -43,15 +43,15 @@ public class PlayerCollision : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Respawn")) {
-            if (!_restartInProgress && !_playerWon) {
+            if (!restartInProgress && !playerWon) {
                 PlayerLostEvent?.Invoke();
-                _restartInProgress = true;
+                restartInProgress = true;
                 Invoke(nameof(RestartTimer), 3.0f);
             }
         } else if (other.gameObject.CompareTag("Finish")) {
-            if (!_restartInProgress) {
+            if (!restartInProgress) {
                 WinEvent?.Invoke();
-                _playerWon = true;
+                playerWon = true;
                 movementScript.enabled = false;
             }
         }
@@ -59,8 +59,7 @@ public class PlayerCollision : MonoBehaviour
     
     private void RestartLogic()
     {
-        movementScript.enabled = true;
-        _playerWon = false;
+        playerWon = false;
      
         Transform playerTransform = transform;
         Rigidbody rb = playerTransform.GetComponent<Rigidbody>();
@@ -76,8 +75,9 @@ public class PlayerCollision : MonoBehaviour
             PositionResetter pR = gO.GetComponent<PositionResetter>();
             pR.ResetPosition();
         }
+
         RestartEvent?.Invoke();
-        _restartInProgress = false;
+        restartInProgress = false;
     }
     
     private void RestartTimer()
