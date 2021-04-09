@@ -9,9 +9,12 @@ public class StartLevelScript : MonoBehaviour
     [SerializeField] private PlayerMovementController playerMovementController;
     [SerializeField] private TMP_Text startText;
     [SerializeField] private float startDelay;
+
+    public delegate void StartEv();
+    public static event StartEv StartEvent;
+    
     private bool enableStart = true;
-
-
+    
     private void OnEnable()
     {
         PlayerCollision.RestartEvent += SetEnableStart;
@@ -33,6 +36,7 @@ public class StartLevelScript : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && enableStart) {
             startText.gameObject.SetActive(false);
             enableStart = false;
+            StartEvent?.Invoke();
             StartCoroutine(RunStartWait());
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RespawnScript : MonoBehaviour
@@ -20,12 +21,14 @@ public class RespawnScript : MonoBehaviour
         PlayerCollision.RestartEvent -= ButtonEnable;
     }
 
-    private void ButtonEnable() {
+    private void ButtonEnable()
+    {
         btn.enabled = true;
     }
     
     private void FireRsEvent() {
         if (!restartText.IsActive()) {
+            EventSystem.current.SetSelectedGameObject(null, null);
             btn.enabled = false;
             RespawnEvent?.Invoke();
         }
