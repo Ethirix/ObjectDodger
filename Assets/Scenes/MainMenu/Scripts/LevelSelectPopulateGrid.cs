@@ -1,35 +1,38 @@
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class LevelSelectPopulateGrid : MonoBehaviour
-{
+public class LevelSelectPopulateGrid : MonoBehaviour {
     [SerializeField] private GameObject prefab;
-        
-    private void Start()
-    { 
+
+    private void Start() { 
         Populate();
     }
 
-    private void Populate()
-    { 
-        int sceneCount = SceneManager.sceneCountInBuildSettings;
-        string[] scenes = new string[sceneCount];
-
-        for (int i = 0; i < sceneCount; i++) { 
-            scenes[i] = SceneUtility.GetScenePathByBuildIndex(i);
+    private void Populate() {
+        List<string> scenes = new List<string>();
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++) { 
+            scenes.Add(SceneUtility.GetScenePathByBuildIndex(i));
         }
+        
+        List<string> levelScenes = scenes.Where(scene => scene.Contains("Level_")).ToList();
 
-        for (int i = 0; i < sceneCount; i++) {
-            if (scenes[i].Contains("L_Level")) {
-                int levelNo = int.Parse(scenes[i][scenes[i].Length - 7].ToString());
-                GameObject newGameObject = Instantiate(prefab, transform);
-                newGameObject.transform.Find("Text").GetComponent<TMP_Text>().text = levelNo.ToString();
-                newGameObject.GetComponent<LoadLevel>().level = levelNo;
-                newGameObject.GetComponent<LoadLevel>().btn = newGameObject.GetComponentInChildren<Button>();
-            }
+        foreach (string scene in levelScenes) {
+            AddSceneToUI(scene);
         }
     }
 
+    private void AddSceneToUI(string scene)
+    {
+        GameObject newGameObject = Instantiate(prefab, transform);
+        LoadLevel loadLevelScript = newGameObject.GetComponent<LoadLevel>();
+        string levelID = scene.Split("_.".ToCharArray())[1];
+
+        newGameObject.transform.Find("Text").GetComponent<TMP_Text>().text = levelID;
+        loadLevelScript.level = levelID;
+        loadLevelScript.btn = newGameObject.GetComponentInChildren<Button>();
+    }
 }

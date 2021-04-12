@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/_LevelTemplate.unity
     guid: 380c3a1a65d805c4cbb0bdc05416d599
   - enabled: 1
-    path: Assets/Scenes/L_Level1.unity
+    path: Assets/Scenes/Level_1.unity
     guid: f59cb4eafea103346b66076598b50ecc
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4aad5625a52c83f43a88b634f6250e13, type: 2}
