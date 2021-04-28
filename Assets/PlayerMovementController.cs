@@ -44,19 +44,19 @@ public class PlayerMovementController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
             if (isOnGround) { force.z *= forwardSpeedMultiplier;
-            } else { force.z *= forwardSpeedMultiplier * jumpSpeedMultiplier; }
+            } else if (!isOnGround && allowJumpMovement) { force.z *= forwardSpeedMultiplier * jumpSpeedMultiplier; }
         }
 
         if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
             if (isOnGround) { force.z *= backwardSpeedMultiplier;
-            } else { force.z *= backwardSpeedMultiplier * jumpSpeedMultiplier; }
+            } else if (!isOnGround && allowJumpMovement) { force.z *= backwardSpeedMultiplier * jumpSpeedMultiplier; }
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             if (isOnGround) { 
                 force.x = -directionalForce;
                 force.z *= moveSideSpeedMultiplier;
-            } else {
+            } else if (!isOnGround && allowJumpMovement) {
                 force.x = -directionalForce * jumpSpeedMultiplier;
                 force.z *= jumpSideMoveSpeedMultiplier;
             }
@@ -66,13 +66,13 @@ public class PlayerMovementController : MonoBehaviour
             if (isOnGround) {
                 force.x = directionalForce;
                 force.z *= moveSideSpeedMultiplier;
-            } else {
+            } else if (!isOnGround && allowJumpMovement) {
                 force.x = directionalForce * jumpSpeedMultiplier;
                 force.z *= jumpSideMoveSpeedMultiplier;
             }
         }
         
-        if (Input.GetKey(KeyCode.Space) && isOnGround && !jumpTimeout && allowJumpMovement) {
+        if (Input.GetKey(KeyCode.Space) && isOnGround && !jumpTimeout) {
             force.y = -Physics.gravity.y * rb.mass * jumpForce;
             StartCoroutine(InvokeJumpEvent());
         }
