@@ -21,8 +21,8 @@ public class PlayerCollision : MonoBehaviour
     }
 
     private void RespawnEventFired() {
-        movementScript.enabled = false;
         if (!restartInProgress) {
+            movementScript.enabled = false;
             restartInProgress = true;
             Invoke(nameof(RestartTimer), 3.0f);
         }
@@ -31,8 +31,8 @@ public class PlayerCollision : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Obstacle")) {
-            movementScript.enabled = false;
             if (!restartInProgress && !playerWon) {
+                movementScript.enabled = false;
                 PlayerLostEvent?.Invoke();
                 restartInProgress = true;
                 Invoke(nameof(RestartTimer), 3.0f); 

@@ -11,7 +11,7 @@ public class QuitToMainMenuScript : MonoBehaviour
         btn.onClick.AddListener(ExitToMenu);
     }
 
-    private static void ExitToMenu()
+    public static void ExitToMenu()
     {
         SceneManager.LoadSceneAsync("MainMenu").allowSceneActivation = true;
     }
