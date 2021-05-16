@@ -8,16 +8,32 @@ using TMPro;
 public class GetUsernamesFromIDs : MonoBehaviour {
 
     private Discord.Discord discord;
+    private bool loaded;
     [Header("Credit Prefabs")]
     [SerializeField] private GameObject leftHand;
     [SerializeField] private GameObject rightHand;
     [Header("Discord IDs")]
     [SerializeField] private long devID;
+    [SerializeField] private long musicProducerID;
     [SerializeField] private List<long> userIDs = new List<long>();
     [Header("UI Stuff")]
     [SerializeField] private GameObject parent;
     [SerializeField] private TMP_Text devUserText;
+    [SerializeField] private TMP_Text musicUserText;
     [SerializeField] private TMP_Text discordNotif;
+
+    private void OnEnable() {
+        InitialiseAfterLoadingScript.Loaded += LoadedEvent;
+    }
+    
+    private void OnDisable() {
+        InitialiseAfterLoadingScript.Loaded -= LoadedEvent;
+    }
+
+    private void LoadedEvent() {
+        loaded = true;
+    }
+
     private readonly List<string> usernameStrings = new List<string>();
 
     private LoadingBarUpdateTextScript sliderScript;
@@ -34,6 +50,7 @@ public class GetUsernamesFromIDs : MonoBehaviour {
 
     private void StartUsernameFetch(UserManager userManager) {
         StartCoroutine(FetchDevUsername(userManager, devID));
+        StartCoroutine(FetchMusicUsername(userManager, musicProducerID));
         sliderScript.UpdateLoadValue(sliderScript.SliderValue() + 1f / (userIDs.Count * 4));
         foreach (long userID in userIDs) {
             StartCoroutine(FetchUsername(userManager, userID));
@@ -45,16 +62,30 @@ public class GetUsernamesFromIDs : MonoBehaviour {
     private void Update() {
         discord.RunCallbacks();
     }
-    
+
     private IEnumerator TimeDiscordNotif() {
         yield return new WaitForSeconds(10f);
+        if (loaded) { yield break; }
         discordNotif.gameObject.SetActive(true);
     }
-    
+
     private IEnumerator FetchDevUsername(UserManager userManager, long userID) {
         userManager.GetUser(userID, (Result result, ref User user) => {
             if (result == Result.Ok) {
                 devUserText.text = user.Username + "#" + user.Discriminator;
+                sliderScript.UpdateLoadValue(sliderScript.SliderValue() + 1f / (userIDs.Count * 2));
+                Debug.Log("Found user: " + user.Username);
+            } else {
+                Debug.Log(result);
+            }
+        });
+        yield break;
+    }
+    
+    private IEnumerator FetchMusicUsername(UserManager userManager, long userID) {
+        userManager.GetUser(userID, (Result result, ref User user) => {
+            if (result == Result.Ok) {
+                musicUserText.text = user.Username + "#" + user.Discriminator;
                 sliderScript.UpdateLoadValue(sliderScript.SliderValue() + 1f / (userIDs.Count * 2));
                 Debug.Log("Found user: " + user.Username);
             } else {
