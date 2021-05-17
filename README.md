@@ -1,6 +1,8 @@
 # ObjectDodger
 My first Unity Game, in which you dodge objects to gain points.
 
+Inspired by Brackeys, [How to make a Video Game Series](https://youtu.be/IlKaB1etrik)
+
 ## Check out my other Active Projects
 
 [![Learning WPF](https://github-readme-stats.vercel.app/api/pin/?username=Ethirix&repo=Learning-MVVM-Pattern&theme=gotham&show_owner=true)](https://github.com/Ethirix/Learning-MVVM-Pattern)  
